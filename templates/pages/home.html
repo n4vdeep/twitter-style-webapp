@@ -1,9 +1,18 @@
-{% extends 'base.html' %} %}
-
+{% extends 'base.html' %}
 {% block content %}
 Welcome to Tweetme
 
+<div id='tweets'>
+  replace me
+</div>
+
 <script>
+  // get html element
+const tweetsElement = document.getElementById("tweets")
+// set new html in that element
+tweetsElement.innerHTML = 'Loading...'
+
+
 const xhr = new XMLHttpRequest()
 const method = 'GET' // "POST"
 const url = "/tweets"
